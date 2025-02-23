@@ -6,7 +6,7 @@ async function runTest() {
   try {
     console.log("Opening Saucedemo Page");
     await driver.get("https://www.saucedemo.com/");
-    await driver.sleep(5000); 
+    await driver.sleep(3000); 
 
     // Login
     console.log("Logging in with user standard_user");
