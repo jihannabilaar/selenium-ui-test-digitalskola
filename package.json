@@ -1,0 +1,24 @@
+{
+  "name": "selenium-ui-test-digitalskola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jihannabilaar/selenium-ui-test-digitalskola.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jihannabilaar/selenium-ui-test-digitalskola/issues"
+  },
+  "homepage": "https://github.com/jihannabilaar/selenium-ui-test-digitalskola#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.29.0"
+  }
+}
