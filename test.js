@@ -6,14 +6,13 @@ async function runTest() {
 
   try {
     await driver.get("https://www.saucedemo.com/");
-    await driver.sleep(3000); 
+    await driver.wait(until.elementLocated(By.id("user-name")), 5000); 
 
     // Login
-    console.log("Logging in with user standard_user");
     await driver.findElement(By.id("user-name")).sendKeys("standard_user");
     await driver.findElement(By.id("password")).sendKeys("secret_sauce");
     await driver.findElement(By.id("login-button")).click();
-    await driver.sleep(3000); 
+    console.log("Logged in");
 
     // Validating that the user is on the dashboard page
     let menuButton = await driver.findElement(By.id("react-burger-menu-btn"));
@@ -24,7 +23,7 @@ async function runTest() {
       By.xpath("//button[text()='Add to cart']")
     );
     await addToCartButton.click();
-    await driver.sleep(2000); 
+    console.log("Item added to cart!");
 
     // Validating that the item is in the cart...
     let cartBadge = await driver.wait(
@@ -35,7 +34,6 @@ async function runTest() {
     assert.strictEqual(cartCount, "1", "Failed to add item to the cart!");
     console.log("Test passed!");
 
-    await driver.sleep(3000);
   } catch (error) {
     console.error(error);
   } finally {
