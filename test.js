@@ -33,6 +33,7 @@ async function runTest() {
     );
     let cartCount = await cartBadge.getText();
     assert.strictEqual(cartCount, "1", "Failed to add item to the cart!");
+    console.log("Test passed!");
 
     await driver.sleep(3000);
   } catch (error) {
