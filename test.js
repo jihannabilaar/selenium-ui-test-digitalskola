@@ -43,5 +43,4 @@ async function runTest() {
   }
 }
 
-// Jalankan test
 runTest();
